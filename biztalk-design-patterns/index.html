@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv='content-language' content='en-us'>
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="description" content="Biztalk Design Patterns, Implementing Design Patterns in Orchestrations. Steps to create Return Address Design pattern in BizTalk. How to crate BizTalk solution.">
+
+<meta name="robots" content="index,follow">
+<meta name="googlebot" content="index,follow">
+
+    
+<title>18 New Biztalk design patterns for New Project | In Design Pictures</title>
+<meta name="url" content="https://designpik.github.io/biztalk-design-patterns/" />
+<meta property="og:url" content="https://designpik.github.io/biztalk-design-patterns/">
+<meta property="article:author" content="Clark"> 
+<meta name="author" content="Clark">
+<meta name="geo.region" content="US">
+<meta name="geo.region" content="GB">
+<meta name="geo.region" content="CA">
+<meta name="geo.region" content="AU">
+<meta name="geo.region" content="IT">
+<meta name="geo.region" content="NL">
+<meta name="geo.region" content="DE">
+<link rel="canonical" href="https://designpik.github.io/biztalk-design-patterns/">
+<link rel="preconnect" href="https://stackpath.bootstrapcdn.com">
+<link rel="dns-prefetch" href="https://stackpath.bootstrapcdn.com">
+<link rel="preconnect" href="https://code.jquery.com">
+<link rel="dns-prefetch" href="https://code.jquery.com">
+<link rel="preconnect" href="https://i.pinimg.com">
+<link rel="dns-prefetch" href="https://i.pinimg.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://designpik.github.io/assets/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Lora:400,400i,700">
+<link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700" rel="stylesheet">
+<link rel="stylesheet" href="https://designpik.github.io/assets/css/main.css">
+<link rel="stylesheet" href="https://designpik.github.io/assets/css/theme.css">
+<link rel="icon" type="image/png" href="/logo.png">
+<link rel="icon" type="image/x-icon" sizes="16x16 32x32" href="/favicon.ico">
+<link rel="shortcut icon" href="/favicon.ico">
+
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "articleSection": "post",
+    "name": "18 New Biztalk design patterns for New Project",
+    "headline": "18 New Biztalk design patterns for New Project",
+    "alternativeHeadline": "",
+    "description": "There are many best practices articles and coding guidelines for BizTalk that are floating around the net but they are not very conducive and pragmatic enough to the IT services industry especially in an offshore development model to leverage them in their turnkey or TM projects. How to crate BizTalk solution. Biztalk design patterns.",
+    "inLanguage": "en-us",
+    "isFamilyFriendly": "true",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https:\/\/designpik.github.io\/biztalk-design-patterns\/"
+    },
+    "author" : {
+        "@type": "Person",
+        "name": "Clark"
+    },
+    "creator" : {
+        "@type": "Person",
+        "name": "Clark"
+    },
+    "accountablePerson" : {
+        "@type": "Person",
+        "name": "Clark"
+    },
+    "copyrightHolder" : "In Design Pictures",
+    "copyrightYear" : "2021",
+    "dateCreated": "2021-05-22T05:46:18.00Z",
+    "datePublished": "2021-05-22T05:46:18.00Z",
+    "dateModified": "2021-05-22T05:46:18.00Z",
+    "publisher":{
+        "@type":"Organization",
+        "name": "In Design Pictures",
+        "url": "https://designpik.github.io/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https:\/\/designpik.github.io\/logo.png",
+            "width":"32",
+            "height":"32"
+        }
+    },
+    "image": "https://designpik.github.io/logo.png",
+    "url" : "https:\/\/designpik.github.io\/biztalk-design-patterns\/",
+    "wordCount" : "1225",
+    "genre" : [ "diy design" ],
+    "keywords" : [ "Biztalk" , "design" , "patterns" ]
+}
+</script>
+
+</head>
+  <body>    
+    <nav id="MagicMenu" class="topnav navbar navbar-expand-lg navbar-light bg-white fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="https://designpik.github.io/"><span style="text-transform: capitalize;font-weight: bold;">In Design Pictures</strong></a><button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="navbar-collapse collapse" id="navbarColor02" style="">
+            <ul class="navbar-nav mr-auto d-flex align-items-center">
+               
+               <li class="nav-item"><a class="nav-link" href="https://designpik.github.io/contact/">Contact</a></li>
+               <li class="nav-item"><a class="nav-link" href="https://designpik.github.io/dmca/">Dmca</a></li>
+               <li class="nav-item"><a class="nav-link" href="https://designpik.github.io/privacy-policy/">Privacy Policy</a></li>
+               <li class="nav-item"><a class="nav-link" href="https://designpik.github.io/about/">About</a></li><li class="nav-item"><a class="nav-link" style="text-transform: capitalize;" href="https://designpik.github.io/categories/trend-design-ideas/" title="Trend design Ideas">Trend design Ideas</a></li></ul>
+        </div>
+    </div>
+    </nav>
+    <main role="main" class="site-content">
+<div class="container">
+<div class="jumbotron jumbotron-fluid mb-3 pl-0 pt-0 pb-0 bg-white position-relative">
+        <div class="h-100 tofront">
+            <div class="row justify-content-between ">
+                <div class=" col-md-6 pr-0 pr-md-4 pt-4 pb-4 align-self-center">
+                    <p class="text-uppercase font-weight-bold"><span class="catlist"><a class="sscroll text-danger" href="https://designpik.github.io/categories/trend-design-ideas"/>Trend design Ideas</a> . </span></p>
+                    <h1 class="display-4 mb-4 article-headline">18 New Biztalk design patterns for New Project</h1>
+                    <div class="d-flex align-items-center">
+                        <small class="ml-3">Written by Clark <span class="text-muted d-block mt-1">May 22, 2021 · <span class="reading-time">6 min read</span></span></small>
+                    </div>
+                </div>
+                <div class="col-md-6 pr-0 align-self-center">
+                    <img class="rounded" src="https://techcommunity.microsoft.com/t5/image/serverpage/image-id/198977i160B58FBBC1FD84D/image-size/large?v=v2&amp;amp;px=999" onerror="this.onerror=null;this.src='https:\/\/designpik.github.io\/img\/placeholder.svg';" alt="18 New Biztalk design patterns for New Project"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-lg pt-4 pb-4">
+    <div class="row justify-content-center">
+        <div class="col-md-12 col-lg-8">
+            <article class="article-post">
+            <p>There are many best practices articles and coding guidelines for BizTalk that are floating around the net but they are not very conducive and pragmatic enough to the IT services industry especially in an offshore development model to leverage them in their turnkey or TM projects. How to crate BizTalk solution. Biztalk design patterns.</p><center>
+	
+</center> <!-- Head tag Code -->
+<p><strong>Biztalk Design Patterns</strong>, Implementing Design Patterns in Orchestrations. Steps to create Return Address Design pattern in BizTalk. How to crate BizTalk solution. This whitepaper demonstrates how to use design patterns to effectively describe integration solution alternatives and guide design decisions.</p>
+<p><img loading="lazy" width="100%" src="https://designpik.github.io/img/placeholder.svg" data-src="https://techcommunity.microsoft.com/t5/image/serverpage/image-id/198971iBC56E3B2BA867F01/image-size/large?v=v2&amp;amp;px=999" alt="Biztalk Patterns Part 2 Sync Async Microsoft Tech Community" title="Biztalk Patterns Part 2 Sync Async Microsoft Tech Community" onerror="this.onerror=null;this.src='https:\/\/designpik.github.io\/img\/placeholder.svg';" class="center" />
+Biztalk Patterns Part 2 Sync Async Microsoft Tech Community From techcommunity.microsoft.com</p>
+<p>Queues-For queuing messages for longer time would be used to implement BizTalk patterns like Sequential Convoy. I am facing some design level challenges. You can use below links to see the design pattern. The patterns provide technology-independent design guidance for developers and architects to describe and develop robust integration solutions.</p>
+<h3 id="you-can-use-below-links-to-see-the-design-pattern">You can use below links to see the design pattern.</h3><p><strong>Read another article</strong>:<br>
+<span class="navi text-left"><a class="badge badge-success" href="/a-designers-research-manual/">A designers research manual</a></span>
+<span class="navi text-left"><a class="badge badge-secondary" href="/a-embroidery-design/">A embroidery design</a></span>
+<span class="navi text-left"><a class="badge badge-primary" href="/a-graphic-designer-is-asked-to-create/">A graphic designer is asked to create</a></span>
+<span class="navi text-left"><a class="badge badge-info" href="/6x4-trailer-design/">6x4 trailer design</a></span>
+<span class="navi text-left"><a class="badge badge-secondary" href="/a-beautiful-design-bible-study/">A beautiful design bible study</a></span></p>
+<p>I am very new to BizTalk. Design patterns within the BizTalk architecture. You can leverage a single pattern or combine multiple patterns to design your business process and then implement the design by using shapes in BizTalk Orchestration Designer. Implementing Design Patterns in Orchestrations. Most of the concepts in the previous chapters have involved examining the intricacies of.</p>
+<div class="d-block p-4">
+	<center>
+		 <script type="text/javascript">
+	atOptions = {
+		'key' : 'cdccd96eae510ea5fd061215a594081f',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.highperformancedisplayformat.com/cdccd96eae510ea5fd061215a594081f/invoke.js"></scr' + 'ipt>');
+		</script>
+	</center>
+</div>
+<p><img loading="lazy" width="100%" src="https://designpik.github.io/img/placeholder.svg" data-src="https://i.ytimg.com/vi/yTZILcV13PI/hqdefault.jpg" alt="Design Patterns In Biztalk Interface Execute Receive Pipeline Inside The Orchestration Part 3 Youtube" title="Design Patterns In Biztalk Interface Execute Receive Pipeline Inside The Orchestration Part 3 Youtube" onerror="this.onerror=null;this.src='https:\/\/designpik.github.io\/img\/placeholder.svg';" class="center" />
+Source: youtube.com</p>
+<p>BizTalk A good article on BizTalk design pattern can be found on msdn link httpsmsdnmicros. Means how to create projects. You can use below links to see the design pattern. The BizTalk Mapping Patterns and Best Practices book is a reference guide mainly intended for BizTalk developers to make their day-to-day lives easier. Design Patterns In Biztalk Interface Execute Receive Pipeline Inside The Orchestration Part 3 Youtube.</p>
+<p><img loading="lazy" width="100%" src="https://designpik.github.io/img/placeholder.svg" data-src="https://techcommunity.microsoft.com/t5/image/serverpage/image-id/198971iBC56E3B2BA867F01/image-size/large?v=v2&amp;amp;px=999" alt="Biztalk Patterns Part 2 Sync Async Microsoft Tech Community" title="Biztalk Patterns Part 2 Sync Async Microsoft Tech Community" onerror="this.onerror=null;this.src='https:\/\/designpik.github.io\/img\/placeholder.svg';" class="center" />
+Source: techcommunity.microsoft.com</p>
+<p>This section discusses the common patterns of BizTalk Server programming as well as enterprise integration patterns. How to crate BizTalk solution. Design Patterns in Orchestrations. 1 949 371 5515. Biztalk Patterns Part 2 Sync Async Microsoft Tech Community.</p>
+<p><img loading="lazy" width="100%" src="https://designpik.github.io/img/placeholder.svg" data-src="https://vkbiztalk.files.wordpress.com/2020/06/image.png?w=640" alt="Hybrid Integration And Biztalk" title="Hybrid Integration And Biztalk" onerror="this.onerror=null;this.src='https:\/\/designpik.github.io\/img\/placeholder.svg';" class="center" />
+Source: vkbiztalk.com</p>
+<p>Publish- SubscriptionBizTalk design patterns. The book offers insights on how maps work the most common patterns in real time scenarios and the best practices to carry out transformations. While Implementing solution for above scenario we are going to implement two design patterns 1Sequential ConvoyUniform Message 2 Aggregator Pattern Aggregator Pattern&ndash; In this pattern we group together number of input messages to create single batch message. The implementation of this pattern in Itinerary Designer is a combination of the Microsoft BizTalk ESB Toolkit itinerary routing service and a single content-based resolver. Hybrid Integration And Biztalk.</p>
+<p><img loading="lazy" width="100%" src="https://designpik.github.io/img/placeholder.svg" data-src="https://www.daxfo.com/media/dynamics-biztalk.png" alt="Biztalk Server Professional Software Consultants It Services Microsoft Dynamics 365 Crm And Erp Solutions" title="Biztalk Server Professional Software Consultants It Services Microsoft Dynamics 365 Crm And Erp Solutions" onerror="this.onerror=null;this.src='https:\/\/designpik.github.io\/img\/placeholder.svg';" class="center" />
+Source: daxfo.com</p>
+<p>You can leverage a single pattern or combine multiple patterns to design your business process and then implement the design by using shapes in BizTalk Orchestration Designer. With BizTalk360 you can automatically identify all the messaging patterns existing in your BizTalk environment and record only the unique patterns. This whitepaper demonstrates how to use design patterns to effectively describe integration solution alternatives and guide design decisions. BizTalk Design Patterns and Practices. Biztalk Server Professional Software Consultants It Services Microsoft Dynamics 365 Crm And Erp Solutions.</p>
+<p><img loading="lazy" width="100%" src="https://designpik.github.io/img/placeholder.svg" data-src="http://social.technet.microsoft.com/wiki/resized-image.ashx/__size/550x0/__key/communityserver-wikis-components-files/00-00-00-00-05/6038.esb.gif" alt="Biztalk Server Esb Survival Guide Technet Articles United States English Technet Wiki" title="Biztalk Server Esb Survival Guide Technet Articles United States English Technet Wiki" onerror="this.onerror=null;this.src='https:\/\/designpik.github.io\/img\/placeholder.svg';" class="center" />
+Source: social.technet.microsoft.com</p>
+<p>I have been asked to create a application in BizTalk. The itinerary routing service is responsible for promoting message routing properties in the BizTalk message context or for explicitly routing a message. The implementation of this pattern in Itinerary Designer is a combination of the Microsoft BizTalk ESB Toolkit itinerary routing service and a single content-based resolver. The following sections explore some of the architectural features of the product itself ranging from core precepts to more subtle implementation details. Biztalk Server Esb Survival Guide Technet Articles United States English Technet Wiki.</p>
+<p><img loading="lazy" width="100%" src="https://designpik.github.io/img/placeholder.svg" data-src="KPgCM53K_KJKoM" alt="2" title="2" onerror="this.onerror=null;this.src='https:\/\/designpik.github.io\/img\/placeholder.svg';" class="center" />
+Source:</p>
+<p>You can leverage a single pattern or combine multiple patterns to design your business process and then implement the design by using shapes in BizTalk Orchestration Designer. Following are some of them. BizTalk Design Patterns and Practices. Enables multiple single messages to join together to achieve a required result. 2.</p>
+<p><img loading="lazy" width="100%" src="https://designpik.github.io/img/placeholder.svg" data-src="https://docs.microsoft.com/en-us/biztalk/core/media/bts-cp-business-process-management-patterns.gif" alt="Designing With Patterns The Business Process Management Solution Biztalk Server Microsoft Docs" title="Designing With Patterns The Business Process Management Solution Biztalk Server Microsoft Docs" onerror="this.onerror=null;this.src='https:\/\/designpik.github.io\/img\/placeholder.svg';" class="center" />
+Source: docs.microsoft.com</p>
+<p>BizTalk Design Patterns and Practices. There is also BizTalk pattern Wizard which can help you with Architecture Skeleton. You can leverage a single pattern or combine multiple patterns to design your business process and then implement the design by using shapes in BizTalk Orchestration Designer. Moreover real time solution are always composite of these application so you can use your own pattern as per requirement. Designing With Patterns The Business Process Management Solution Biztalk Server Microsoft Docs.</p>
+<p><img loading="lazy" width="100%" src="https://designpik.github.io/img/placeholder.svg" data-src="https://docs.microsoft.com/en-us/biztalk/esb-toolkit/media/esbarchitecture.gif" alt="Architecture Of The Biztalk Esb Toolkit Biztalk Server Microsoft Docs" title="Architecture Of The Biztalk Esb Toolkit Biztalk Server Microsoft Docs" onerror="this.onerror=null;this.src='https:\/\/designpik.github.io\/img\/placeholder.svg';" class="center" />
+Source: docs.microsoft.com</p>
+<p>I am facing some design level challenges. While Implementing solution for above scenario we are going to implement two design patterns 1Sequential ConvoyUniform Message 2 Aggregator Pattern Aggregator Pattern&ndash; In this pattern we group together number of input messages to create single batch message. Subsequently the paper discusses implementation strategies for each pattern with BizTalk Server 2004. The set of related messages can arrive in any order but BizTalk Server must receive all of them before starting the process. Architecture Of The Biztalk Esb Toolkit Biztalk Server Microsoft Docs.</p>
+<p><img loading="lazy" width="100%" src="https://designpik.github.io/img/placeholder.svg" data-src="https://i.ytimg.com/vi/SSgqfMrF240/maxresdefault.jpg" alt="Design Patterns In Biztalk Interface Sequential Convoy Part 1 Youtube" title="Design Patterns In Biztalk Interface Sequential Convoy Part 1 Youtube" onerror="this.onerror=null;this.src='https:\/\/designpik.github.io\/img\/placeholder.svg';" class="center" />
+Source: youtube.com</p>
+<p>A high level comparison of patterns in application integration and biztalk mappings. This article attempts to fill those gaps. In this demo I would explain how to implement sequential convoy in BizTalk. The chapters to date have dealt with advanced concepts with regard to pipelines and messaging. Design Patterns In Biztalk Interface Sequential Convoy Part 1 Youtube.</p>
+<p><img loading="lazy" width="100%" src="https://designpik.github.io/img/placeholder.svg" data-src="https://i.ytimg.com/vi/LNzDRlGNDgs/sddefault.jpg" alt="Design Patterns In Biztalk Interface Parallel Convoy Part 2 Youtube" title="Design Patterns In Biztalk Interface Parallel Convoy Part 2 Youtube" onerror="this.onerror=null;this.src='https:\/\/designpik.github.io\/img\/placeholder.svg';" class="center" />
+Source: youtube.com</p>
+<p>You can leverage a single pattern or combine multiple patterns to design your business process and then implement the design by using shapes in BizTalk Orchestration Designer. Read on for patterns like workflow basic control system management etc. BizTalk A good article on BizTalk design pattern can be found on msdn link httpsmsdnmicros. The set of related messages can arrive in any order but BizTalk Server must receive all of them before starting the process. Design Patterns In Biztalk Interface Parallel Convoy Part 2 Youtube.</p>
+<p><img loading="lazy" width="100%" src="https://designpik.github.io/img/placeholder.svg" data-src="https://techcommunity.microsoft.com/t5/image/serverpage/image-id/198974i57BC81D697E0C6AD/image-size/large?v=v2&amp;amp;px=999" alt="Biztalk Patterns Part 2 Sync Async Microsoft Tech Community" title="Biztalk Patterns Part 2 Sync Async Microsoft Tech Community" onerror="this.onerror=null;this.src='https:\/\/designpik.github.io\/img\/placeholder.svg';" class="center" />
+Source: techcommunity.microsoft.com</p>
+<p>I am very new to BizTalk. I am facing some design level challenges. Queues-For queuing messages for longer time would be used to implement BizTalk patterns like Sequential Convoy. In this demo I would explain how to implement sequential convoy in BizTalk. Biztalk Patterns Part 2 Sync Async Microsoft Tech Community.</p>
+<p><img loading="lazy" width="100%" src="https://designpik.github.io/img/placeholder.svg" data-src="http://social.technet.microsoft.com/wiki/cfs-file.ashx/__key/communityserver-wikis-components-files/00-00-00-00-05/8540.ArchitectureNetwork.jpg" alt="Biztalk Integration Development Architecture Technet Articles United States English Technet Wiki" title="Biztalk Integration Development Architecture Technet Articles United States English Technet Wiki" onerror="this.onerror=null;this.src='https:\/\/designpik.github.io\/img\/placeholder.svg';" class="center" />
+Source: social.technet.microsoft.com</p>
+<p>A high level comparison of patterns in application integration and biztalk mappings. BizTalk Hotrod Issue 4 - Parallel Convoys. The book offers insights on how maps work the most common patterns in real time scenarios and the best practices to carry out transformations. Publish- SubscriptionBizTalk design patterns. Biztalk Integration Development Architecture Technet Articles United States English Technet Wiki.</p>
+<p><img loading="lazy" width="100%" src="https://designpik.github.io/img/placeholder.svg" data-src="https://2.bp.blogspot.com/-3Q4g80c6L5k/WWNXq84alPI/AAAAAAAAACk/5rSJHZkwFVYwa9CKUtoxqGiXiFQXlCRYQCPcBGAYYCw/s640/BizTalk_Server_Architecture.jpg" alt="Biztalk Interview Question And Answer" title="Biztalk Interview Question And Answer" onerror="this.onerror=null;this.src='https:\/\/designpik.github.io\/img\/placeholder.svg';" class="center" />
+Source: biztalklive.blogspot.com</p>
+<p>Bellow are brief description about these design pattern. Throgh the given scenario we will have two more design pattern under our belt. The BizTalk Mapping Patterns and Best Practices book is a reference guide mainly intended for BizTalk developers to make their day-to-day lives easier. Implementing Design Patterns in Orchestrations. Biztalk Interview Question And Answer.</p>
+<p><img loading="lazy" width="100%" src="https://designpik.github.io/img/placeholder.svg" data-src="http://4.bp.blogspot.com/-P9ZlvRrYC40/U187khBLXZI/AAAAAAAAAc8/7k6f2L9fDPI/s1600/singleton.jpg" alt="Biztalk Patterns" title="Biztalk Patterns" onerror="this.onerror=null;this.src='https:\/\/designpik.github.io\/img\/placeholder.svg';" class="center" />
+Source: biztalkfaqs.blogspot.com</p>
+<p>With BizTalk360 you can automatically identify all the messaging patterns existing in your BizTalk environment and record only the unique patterns. I am facing some design level challenges. BizTalk Server Pattern Wizard. Means how to create projects. Biztalk Patterns.</p>
+<p><img loading="lazy" width="100%" src="https://designpik.github.io/img/placeholder.svg" data-src="https://techcommunity.microsoft.com/t5/image/serverpage/image-id/198977i160B58FBBC1FD84D/image-size/large?v=v2&amp;amp;px=999" alt="Biztalk Patterns Part 2 Sync Async Microsoft Tech Community" title="Biztalk Patterns Part 2 Sync Async Microsoft Tech Community" onerror="this.onerror=null;this.src='https:\/\/designpik.github.io\/img\/placeholder.svg';" class="center" />
+Source: techcommunity.microsoft.com</p>
+<p>Following are some of them. Publish- SubscriptionBizTalk design patterns. Depending on the requirement one has to decide which pattern to use. Biztalk Patterns are nothing but the common scenarios which we use frequently while designing the Biztalk solution. Biztalk Patterns Part 2 Sync Async Microsoft Tech Community.</p>
+
+            </article>
+            <div class="row"><div class="posts-image" style="width:50%;"><a style="margin:5px;" href="/agile-user-centered-design/">&laquo;&laquo;&nbsp;15 Sample Agile user centered design with remodeling ideas</a></div>
+    <div class="posts-image" style="width:50%"><a style="margin:5px;" href="/aka-design-promedia/">48 Sample Aka design promedia for New Project&nbsp;&raquo;&raquo;</a></div></div>
+            
+            <div class="mb-4">
+                <span class="taglist"></span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+<div class="container pt-4 pb-4">
+    
+    <h5 class="font-weight-bold spanborder"><span>Related Article</span></h5>
+    <div class="row">
+        <div class="col-lg-6">
+                <div class="mb-3 d-flex align-items-center">
+                    <a href="/99-designers-online-review/"><img height="80" src="/img/placeholder.svg" data-src="https://i.pinimg.com/originals/e3/77/b9/e377b984b8c7f27651122823a13da787.jpg" onerror="this.onerror=null;this.src='https:\/\/designpik.github.io\/img\/placeholder.svg';"/></a>
+                    <div class="pl-3">
+                        <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="/99-designers-online-review/">46 New 99 designers online review With Creative Desiign</a>
+                        </h2>
+                        <small class="text-muted">Dec 22 . 6 min read</small>
+                    </div>
+                </div>
+        </div>
+        <div class="col-lg-6">
+                <div class="mb-3 d-flex align-items-center">
+                    <a href="/all-white-living-room-designs/"><img height="80" src="/img/placeholder.svg" data-src="https://i.pinimg.com/originals/fe/8e/6a/fe8e6a5eb8a800e56f5a6fe0e5c843e7.jpg" onerror="this.onerror=null;this.src='https:\/\/designpik.github.io\/img\/placeholder.svg';"/></a>
+                    <div class="pl-3">
+                        <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="/all-white-living-room-designs/">46 Popular All white living room designs for New Project</a>
+                        </h2>
+                        <small class="text-muted">Jan 22 . 8 min read</small>
+                    </div>
+                </div>
+        </div>
+        <div class="col-lg-6">
+                <div class="mb-3 d-flex align-items-center">
+                    <a href="/allegro-package-designer-%E6%95%99%E5%AD%B8/"><img height="80" src="/img/placeholder.svg" data-src="https://i.pinimg.com/originals/a1/d4/60/a1d460adadf15ec7e4a4710c26890e85.jpg" onerror="this.onerror=null;this.src='https:\/\/designpik.github.io\/img\/placeholder.svg';"/></a>
+                    <div class="pl-3">
+                        <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="/allegro-package-designer-%E6%95%99%E5%AD%B8/">18 Top Allegro package designer 教學 for New Project</a>
+                        </h2>
+                        <small class="text-muted">Nov 24 . 4 min read</small>
+                    </div>
+                </div>
+        </div>
+        <div class="col-lg-6">
+                <div class="mb-3 d-flex align-items-center">
+                    <a href="/av-design-consultants-inc/"><img height="80" src="/img/placeholder.svg" data-src="https://i.pinimg.com/originals/9d/a9/14/9da914adb566815f6794ca5cac45efb0.png" onerror="this.onerror=null;this.src='https:\/\/designpik.github.io\/img\/placeholder.svg';"/></a>
+                    <div class="pl-3">
+                        <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="/av-design-consultants-inc/">47  Av design consultants inc Trend in 2021</a>
+                        </h2>
+                        <small class="text-muted">Aug 30 . 7 min read</small>
+                    </div>
+                </div>
+        </div>
+        <div class="col-lg-6">
+                <div class="mb-3 d-flex align-items-center">
+                    <a href="/assistant-jewelry-designer-jobs/"><img height="80" src="/img/placeholder.svg" data-src="https://i.pinimg.com/originals/a6/85/7b/a6857be3f459c5d6f2ddd2142e2002ea.png" onerror="this.onerror=null;this.src='https:\/\/designpik.github.io\/img\/placeholder.svg';"/></a>
+                    <div class="pl-3">
+                        <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="/assistant-jewelry-designer-jobs/">27  Assistant jewelry designer jobs Trend in 2021</a>
+                        </h2>
+                        <small class="text-muted">Mar 17 . 7 min read</small>
+                    </div>
+                </div>
+        </div>
+        <div class="col-lg-6">
+                <div class="mb-3 d-flex align-items-center">
+                    <a href="/birthday-invitation-design-software/"><img height="80" src="/img/placeholder.svg" data-src="https://i.pinimg.com/originals/f7/29/10/f72910d54c0690eff2d0266e48182f57.jpg" onerror="this.onerror=null;this.src='https:\/\/designpik.github.io\/img\/placeholder.svg';"/></a>
+                    <div class="pl-3">
+                        <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="/birthday-invitation-design-software/">33 Great Birthday invitation design software Trend in 2022</a>
+                        </h2>
+                        <small class="text-muted">Jan 18 . 6 min read</small>
+                    </div>
+                </div>
+        </div>
+        <div class="col-lg-6">
+                <div class="mb-3 d-flex align-items-center">
+                    <a href="/australian-interior-design-awards-2019/"><img height="80" src="/img/placeholder.svg" data-src="https://i.pinimg.com/564x/65/b3/2e/65b32e225c07b71437bb1321b0f0fbb8.jpg" onerror="this.onerror=null;this.src='https:\/\/designpik.github.io\/img\/placeholder.svg';"/></a>
+                    <div class="pl-3">
+                        <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="/australian-interior-design-awards-2019/">32 Sample Australian interior design awards 2019 Trend in 2022</a>
+                        </h2>
+                        <small class="text-muted">Dec 13 . 7 min read</small>
+                    </div>
+                </div>
+        </div>
+        <div class="col-lg-6">
+                <div class="mb-3 d-flex align-items-center">
+                    <a href="/staircase-designers-uk/"><img height="80" src="/img/placeholder.svg" data-src="https://i.pinimg.com/736x/51/0c/33/510c33d14d57ba37bd7f805baff738da.jpg" onerror="this.onerror=null;this.src='https:\/\/designpik.github.io\/img\/placeholder.svg';"/></a>
+                    <div class="pl-3">
+                        <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="/staircase-designers-uk/">35 Best Staircase designers uk with remodeling ideas</a>
+                        </h2>
+                        <small class="text-muted">Jun 19 . 7 min read</small>
+                    </div>
+                </div>
+        </div>
+</div>
+</div>
+</div>
+    </main>    <script async="async" src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script async="async" src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script async="async" src="https://designpik.github.io/assets/js/theme.js"></script>
+    <script>function init(){var imgDefer=document.getElementsByTagName('img');for (var i=0; i<imgDefer.length; i++){if(imgDefer[i].getAttribute('data-src')){imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));}}}window.onload=init;</script>
+    
+    <footer class="bg-white border-top p-3 text-muted small">
+        <div class="container">
+        <div class="row align-items-center justify-content-between">
+            <div><span style="text-transform: capitalize;"><a href="https://designpik.github.io/">In Design Pictures</a> Copyright &copy; 2022.</span></div>
+            
+        </div>
+        </div>
+    </footer>
+
+
+<script type="text/javascript">
+var sc_project=12137781; 
+var sc_invisible=1; 
+var sc_security="24ae3eb0"; 
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js"
+async></script>
+<noscript><div class="statcounter"><a title="Web Analytics"
+href="https://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="https://c.statcounter.com/12137781/0/24ae3eb0/1/"
+alt="Web Analytics"
+referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+
+ 
+  </body>
+</html>

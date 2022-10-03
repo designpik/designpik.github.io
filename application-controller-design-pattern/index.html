@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv='content-language' content='en-us'>
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="description" content="Application Controller Design Pattern, The pattern requires that each of these be separated into different objects. You want to reuse action and view-management code.">
+
+<meta name="robots" content="index,follow">
+<meta name="googlebot" content="index,follow">
+
+    
+<title>43  Application controller design pattern for New Project | In Design Pictures</title>
+<meta name="url" content="https://designpik.github.io/application-controller-design-pattern/" />
+<meta property="og:url" content="https://designpik.github.io/application-controller-design-pattern/">
+<meta property="article:author" content="Smith"> 
+<meta name="author" content="Smith">
+<meta name="geo.region" content="US">
+<meta name="geo.region" content="GB">
+<meta name="geo.region" content="CA">
+<meta name="geo.region" content="AU">
+<meta name="geo.region" content="IT">
+<meta name="geo.region" content="NL">
+<meta name="geo.region" content="DE">
+<link rel="canonical" href="https://designpik.github.io/application-controller-design-pattern/">
+<link rel="preconnect" href="https://stackpath.bootstrapcdn.com">
+<link rel="dns-prefetch" href="https://stackpath.bootstrapcdn.com">
+<link rel="preconnect" href="https://code.jquery.com">
+<link rel="dns-prefetch" href="https://code.jquery.com">
+<link rel="preconnect" href="https://i.pinimg.com">
+<link rel="dns-prefetch" href="https://i.pinimg.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://designpik.github.io/assets/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Lora:400,400i,700">
+<link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700" rel="stylesheet">
+<link rel="stylesheet" href="https://designpik.github.io/assets/css/main.css">
+<link rel="stylesheet" href="https://designpik.github.io/assets/css/theme.css">
+<link rel="icon" type="image/png" href="/logo.png">
+<link rel="icon" type="image/x-icon" sizes="16x16 32x32" href="/favicon.ico">
+<link rel="shortcut icon" href="/favicon.ico">
+
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "articleSection": "post",
+    "name": "43  Application controller design pattern for New Project",
+    "headline": "43  Application controller design pattern for New Project",
+    "alternativeHeadline": "",
+    "description": "This pattern is used together with FrontController discussed earlier and is an intermediary between FrontController and Command. Structure an Application With the MVC Design Pattern. Application controller design pattern.",
+    "inLanguage": "en-us",
+    "isFamilyFriendly": "true",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https:\/\/designpik.github.io\/application-controller-design-pattern\/"
+    },
+    "author" : {
+        "@type": "Person",
+        "name": "Smith"
+    },
+    "creator" : {
+        "@type": "Person",
+        "name": "Smith"
+    },
+    "accountablePerson" : {
+        "@type": "Person",
+        "name": "Smith"
+    },
+    "copyrightHolder" : "In Design Pictures",
+    "copyrightYear" : "2021",
+    "dateCreated": "2021-11-05T10:20:43.00Z",
+    "datePublished": "2021-11-05T10:20:43.00Z",
+    "dateModified": "2021-11-05T10:20:43.00Z",
+    "publisher":{
+        "@type":"Organization",
+        "name": "In Design Pictures",
+        "url": "https://designpik.github.io/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https:\/\/designpik.github.io\/logo.png",
+            "width":"32",
+            "height":"32"
+        }
+    },
+    "image": "https://designpik.github.io/logo.png",
+    "url" : "https:\/\/designpik.github.io\/application-controller-design-pattern\/",
+    "wordCount" : "1333",
+    "genre" : [ "diy design" ],
+    "keywords" : [ "Application" , "controller" , "design" , "pattern" ]
+}
+</script>
+
+</head>
+  <body>    
+    <nav id="MagicMenu" class="topnav navbar navbar-expand-lg navbar-light bg-white fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="https://designpik.github.io/"><span style="text-transform: capitalize;font-weight: bold;">In Design Pictures</strong></a><button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="navbar-collapse collapse" id="navbarColor02" style="">
+            <ul class="navbar-nav mr-auto d-flex align-items-center">
+               
+               <li class="nav-item"><a class="nav-link" href="https://designpik.github.io/contact/">Contact</a></li>
+               <li class="nav-item"><a class="nav-link" href="https://designpik.github.io/dmca/">Dmca</a></li>
+               <li class="nav-item"><a class="nav-link" href="https://designpik.github.io/privacy-policy/">Privacy Policy</a></li>
+               <li class="nav-item"><a class="nav-link" href="https://designpik.github.io/about/">About</a></li><li class="nav-item"><a class="nav-link" style="text-transform: capitalize;" href="https://designpik.github.io/categories/trend-design-ideas/" title="Trend design Ideas">Trend design Ideas</a></li></ul>
+        </div>
+    </div>
+    </nav>
+    <main role="main" class="site-content">
+<div class="container">
+<div class="jumbotron jumbotron-fluid mb-3 pl-0 pt-0 pb-0 bg-white position-relative">
+        <div class="h-100 tofront">
+            <div class="row justify-content-between ">
+                <div class=" col-md-6 pr-0 pr-md-4 pt-4 pb-4 align-self-center">
+                    <p class="text-uppercase font-weight-bold"><span class="catlist"><a class="sscroll text-danger" href="https://designpik.github.io/categories/trend-design-ideas"/>Trend design Ideas</a> . </span></p>
+                    <h1 class="display-4 mb-4 article-headline">43  Application controller design pattern for New Project</h1>
+                    <div class="d-flex align-items-center">
+                        <small class="ml-3">Written by Smith <span class="text-muted d-block mt-1">Nov 05, 2021 · <span class="reading-time">7 min read</span></span></small>
+                    </div>
+                </div>
+                <div class="col-md-6 pr-0 align-self-center">
+                    <img class="rounded" src="https://i.pinimg.com/originals/24/45/e1/2445e174f0c9198ede64b393f21499b4.png" onerror="this.onerror=null;this.src='https:\/\/designpik.github.io\/img\/placeholder.svg';" alt="43  Application controller design pattern for New Project"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-lg pt-4 pb-4">
+    <div class="row justify-content-center">
+        <div class="col-md-12 col-lg-8">
+            <article class="article-post">
+            <p>This pattern is used together with FrontController discussed earlier and is an intermediary between FrontController and Command. Structure an Application With the MVC Design Pattern. Application controller design pattern.</p><center>
+	
+</center> <!-- Head tag Code -->
+<p><strong>Application Controller Design Pattern</strong>, The pattern requires that each of these be separated into different objects. You want to reuse action and view-management code. The pattern defines not only the roles objects play in the application it defines the way objects communicate with each other. MVC design pattern is also known as Model-View-Controller.</p>
+<p><img loading="lazy" width="100%" src="https://designpik.github.io/img/placeholder.svg" data-src="https://i.pinimg.com/736x/80/16/ca/8016ca80c231e0fd975e1939e3c9140f.jpg" alt="Oop Otlichie Mvp Ot Mvc Stack Overflow Na Russkom In 2021 Web Development Design Design Development Architecture" title="Oop Otlichie Mvp Ot Mvc Stack Overflow Na Russkom In 2021 Web Development Design Design Development Architecture" onerror="this.onerror=null;this.src='https:\/\/designpik.github.io\/img\/placeholder.svg';" class="center" />
+Oop Otlichie Mvp Ot Mvc Stack Overflow Na Russkom In 2021 Web Development Design Design Development Architecture From pinterest.com</p>
+<p>These solutions not only solve recurring problems but also help developers understand the design of a framework by recognizing common patterns. Unity Application Model View Controller Component Design Pattern - GitHub - JOESIDincApplication-Model-View-Controller-Component. This pattern is used together with FrontController discussed earlier and is an intermediary between FrontController and Command. Unity Application Model View Controller Component Design Pattern.</p>
+<h3 id="lets-discuss-how-application-controller-design-pattern-works-with-examples">Lets discuss how Application Controller Design Pattern works with examples.</h3><p><strong>Read another article</strong>:<br>
+<span class="navi text-left"><a class="badge badge-dark" href="/award-winning-web-design-firms/">Award winning web design firms</a></span>
+<span class="navi text-left"><a class="badge badge-success" href="/b-brooks-garden-design/">B brooks garden design</a></span>
+<span class="navi text-left"><a class="badge badge-dark" href="/awesome-annual-report-design/">Awesome annual report design</a></span>
+<span class="navi text-left"><a class="badge badge-dark" href="/b-and-q-designer-radiators/">B and q designer radiators</a></span>
+<span class="navi text-left"><a class="badge badge-dark" href="/ayesha-name-design/">Ayesha name design</a></span></p>
+<p>The final design pattern is MVC - or the model-view-controller pattern. Today the MVC pattern is used for modern web applications because it allows the application to be scalable maintainable and easy to expand. The front controller may use other helpers to achieve the dispatching mechanism. Unity Application Model View Controller Component Design Pattern - GitHub - JOESIDincApplication-Model-View-Controller-Component. You want to centralize and modularize action and view management.</p>
+<div class="d-block p-4">
+	<center>
+		 <script type="text/javascript">
+	atOptions = {
+		'key' : 'cdccd96eae510ea5fd061215a594081f',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.highperformancedisplayformat.com/cdccd96eae510ea5fd061215a594081f/invoke.js"></scr' + 'ipt>');
+		</script>
+	</center>
+</div>
+<p><img loading="lazy" width="100%" src="https://designpik.github.io/img/placeholder.svg" data-src="https://i.pinimg.com/originals/ae/6a/28/ae6a28633bf31aa45ba3a917cc372bcc.jpg" alt="Pin On Springhibernate" title="Pin On Springhibernate" onerror="this.onerror=null;this.src='https:\/\/designpik.github.io\/img\/placeholder.svg';" class="center" />
+Source: pinterest.com</p>
+<p>These solutions not only solve recurring problems but also help developers understand the design of a framework by recognizing common patterns. These solutions not only solve recurring problems but also help developers understand the design of a framework by recognizing common patterns. The brains of the application that controls how data is displayed. The view is an object that is configured with a strategy. Pin On Springhibernate.</p>
+<p><img loading="lazy" width="100%" src="https://designpik.github.io/img/placeholder.svg" data-src="https://i.pinimg.com/originals/9d/56/32/9d56327f4086763315cae639e0920d86.png" alt="Figure 4 2 Http Request Processing In An Mvc Web Application Software Testing Web Application Web Development" title="Figure 4 2 Http Request Processing In An Mvc Web Application Software Testing Web Application Web Development" onerror="this.onerror=null;this.src='https:\/\/designpik.github.io\/img\/placeholder.svg';" class="center" />
+Source: pinterest.com</p>
+<p>Unity Application Model View Controller Component Design Pattern - GitHub - JOESIDincApplication-Model-View-Controller-Component. Data being manipulated A user-interface through which this. For a full description see P of EAA page 379. The Model-View-Controller MVC design pattern assigns objects in an application one of three roles. Figure 4 2 Http Request Processing In An Mvc Web Application Software Testing Web Application Web Development.</p>
+<p><img loading="lazy" width="100%" src="https://designpik.github.io/img/placeholder.svg" data-src="https://i.pinimg.com/736x/4d/d2/58/4dd2588c5108b90695c32faa741c78c9.jpg" alt="Mvc Architecture Example With Servlets And Jsp Mitrajit S Tech Blog Mvc Architecture Architecture Web Technology" title="Mvc Architecture Example With Servlets And Jsp Mitrajit S Tech Blog Mvc Architecture Architecture Web Technology" onerror="this.onerror=null;this.src='https:\/\/designpik.github.io\/img\/placeholder.svg';" class="center" />
+Source: pinterest.com</p>
+<p>The Model-View-Controller MVC software design pattern is a method for separating concerns within a software application. These solutions not only solve recurring problems but also help developers understand the design of a framework by recognizing common patterns. Unity Application Model View Controller Component Design Pattern. The brains of the application that controls how data is displayed. Mvc Architecture Example With Servlets And Jsp Mitrajit S Tech Blog Mvc Architecture Architecture Web Technology.</p>
+<p><img loading="lazy" width="100%" src="https://designpik.github.io/img/placeholder.svg" data-src="https://i.pinimg.com/originals/b8/24/08/b82408c417ba88355f0307ff19f78cff.gif" alt="Flux Vs Mvc Design Patterns Pattern Design Design Pattern" title="Flux Vs Mvc Design Patterns Pattern Design Design Pattern" onerror="this.onerror=null;this.src='https:\/\/designpik.github.io\/img\/placeholder.svg';" class="center" />
+Source: pinterest.com</p>
+<p>However the entire idea might seem a bit abstract at first. Lets discuss how Application Controller Design Pattern works with examples. The pattern defines not only the roles objects play in the application it defines the way objects communicate with each other. Log in or subscribe for free to enjoy all this course has to offer. Flux Vs Mvc Design Patterns Pattern Design Design Pattern.</p>
+<p><img loading="lazy" width="100%" src="https://designpik.github.io/img/placeholder.svg" data-src="https://i.pinimg.com/originals/ab/90/fb/ab90fb4a47bd8b3f8844f59e0154142a.jpg" alt="Mvc Pattern Uml Diagram Pattern Design Class Diagram Pattern" title="Mvc Pattern Uml Diagram Pattern Design Class Diagram Pattern" onerror="this.onerror=null;this.src='https:\/\/designpik.github.io\/img\/placeholder.svg';" class="center" />
+Source: pinterest.com</p>
+<p>However the entire idea might seem a bit abstract at first. You want to centralize and modularize action and view management. You want to improve request-handling extensibility such as adding use case functionality to an. In principle the application logic or controller is separated from the technology used to display information to the user or the view layer. Mvc Pattern Uml Diagram Pattern Design Class Diagram Pattern.</p>
+<p><img loading="lazy" width="100%" src="https://designpik.github.io/img/placeholder.svg" data-src="https://i.pinimg.com/736x/24/c8/ef/24c8eff373a1cd9312a53c6b7dcd03c8--design-patterns-java.jpg" alt="Java Ee Page Controller Design Pattern Controller Design Pattern Design Pattern" title="Java Ee Page Controller Design Pattern Controller Design Pattern Design Pattern" onerror="this.onerror=null;this.src='https:\/\/designpik.github.io\/img\/placeholder.svg';" class="center" />
+Source: pinterest.com</p>
+<p>You want to reuse action and view-management code. The pattern defines not only the roles objects play in the application it defines the way objects communicate with each other. Lets discuss how Application Controller Design Pattern works with examples. For a full description see P of EAA page 379. Java Ee Page Controller Design Pattern Controller Design Pattern Design Pattern.</p>
+<p><img loading="lazy" width="100%" src="https://designpik.github.io/img/placeholder.svg" data-src="https://i.pinimg.com/originals/7b/ba/b9/7bbab9312130c8927d10d19c05f31ead.jpg" alt="Java Ee Model View Controller Design Pattern Pattern Design Controller Design Design" title="Java Ee Model View Controller Design Pattern Pattern Design Controller Design Design" onerror="this.onerror=null;this.src='https:\/\/designpik.github.io\/img\/placeholder.svg';" class="center" />
+Source: pinterest.com</p>
+<p>The view is an object that is configured with a strategy. Structure an Application With the MVC Design Pattern. However the entire idea might seem a bit abstract at first. Using the Strategy pattern also keeps the view decoupled. Java Ee Model View Controller Design Pattern Pattern Design Controller Design Design.</p>
+<p><img loading="lazy" width="100%" src="https://designpik.github.io/img/placeholder.svg" data-src="https://i.pinimg.com/736x/df/9e/de/df9ede4db8e8b0b87e42b25c9c5a4938--design-patterns-java.jpg" alt="Java Ee Application Controller Design Pattern Controller Design Pattern Design Enterprise Application" title="Java Ee Application Controller Design Pattern Controller Design Pattern Design Enterprise Application" onerror="this.onerror=null;this.src='https:\/\/designpik.github.io\/img\/placeholder.svg';" class="center" />
+Source: in.pinterest.com</p>
+<p>Used mainly in the development of Web applications Desktop applications as well as mobile applications the MVC architecture model. Log in or subscribe for free to enjoy all this course has to offer. It is a common architectural pattern that is used to design and create interfaces and the structure of an application. The front controller design pattern means that all requests that come for a resource in an application will be handled by a single handler and then dispatched to the appropriate handler for that type of request. Java Ee Application Controller Design Pattern Controller Design Pattern Design Enterprise Application.</p>
+<p><img loading="lazy" width="100%" src="https://designpik.github.io/img/placeholder.svg" data-src="https://i.pinimg.com/originals/40/5c/5a/405c5a1241787f82f6333980eb447a78.gif" alt="View Helper Pattern Separates The Static View Such As Jsp S From The Processing Of The Business Model Data Fram Design Patterns In Java Pattern Design Pattern" title="View Helper Pattern Separates The Static View Such As Jsp S From The Processing Of The Business Model Data Fram Design Patterns In Java Pattern Design Pattern" onerror="this.onerror=null;this.src='https:\/\/designpik.github.io\/img\/placeholder.svg';" class="center" />
+Source: co.pinterest.com</p>
+<p>MVC is more of an architectural. The front controller may use other helpers to achieve the dispatching mechanism. Using the Strategy pattern also keeps the view decoupled. The view is an object that is configured with a strategy. View Helper Pattern Separates The Static View Such As Jsp S From The Processing Of The Business Model Data Fram Design Patterns In Java Pattern Design Pattern.</p>
+<p><img loading="lazy" width="100%" src="https://designpik.github.io/img/placeholder.svg" data-src="https://i.pinimg.com/originals/b5/31/f3/b531f3259ff30976159f6f57109d8d7c.jpg" alt="Java Ee Front Controller Design Pattern Class And Sequence Diagram Pattern Design Controller Design Design Pattern Java" title="Java Ee Front Controller Design Pattern Class And Sequence Diagram Pattern Design Controller Design Design Pattern Java" onerror="this.onerror=null;this.src='https:\/\/designpik.github.io\/img\/placeholder.svg';" class="center" />
+Source: in.pinterest.com</p>
+<p>Unity Application Model View Controller Component Design Pattern - GitHub - JOESIDincApplication-Model-View-Controller-Component. You want to centralize and modularize action and view management. The brains of the application that controls how data is displayed. The pattern requires that each of these be separated into different objects. Java Ee Front Controller Design Pattern Class And Sequence Diagram Pattern Design Controller Design Design Pattern Java.</p>
+<p><img loading="lazy" width="100%" src="https://designpik.github.io/img/placeholder.svg" data-src="https://i.pinimg.com/originals/aa/3c/36/aa3c36a87485d43ffe8b51d2add3b6c7.png" alt="Use An Application Controller To Centralize Retrieval And Invocation Of Request Processing Components Design Patterns In Java Controller Design Pattern Design" title="Use An Application Controller To Centralize Retrieval And Invocation Of Request Processing Components Design Patterns In Java Controller Design Pattern Design" onerror="this.onerror=null;this.src='https:\/\/designpik.github.io\/img\/placeholder.svg';" class="center" />
+Source: pinterest.com</p>
+<p>The Model-View-Controller MVC software design pattern is a method for separating concerns within a software application. The model is a communications vehicle between the controller and view layers. Use an Application Controller to centralize retrieval and invocation of request-processing components such as commands and views. The front controller may use other helpers to achieve the dispatching mechanism. Use An Application Controller To Centralize Retrieval And Invocation Of Request Processing Components Design Patterns In Java Controller Design Pattern Design.</p>
+<p><img loading="lazy" width="100%" src="https://designpik.github.io/img/placeholder.svg" data-src="https://i.pinimg.com/originals/73/ab/c2/73abc2747c602d839ca97a170be1b2b6.png" alt="Android Architecture Android Project Android Architecture" title="Android Architecture Android Project Android Architecture" onerror="this.onerror=null;this.src='https:\/\/designpik.github.io\/img\/placeholder.svg';" class="center" />
+Source: pinterest.com</p>
+<p>Unity Application Model View Controller Component Design Pattern. The pattern requires that each of these be separated into different objects. The model is a communications vehicle between the controller and view layers. The concept of MVCs was first introduced by Trygve Reenskaug who proposed it as a way to develop desktop application GUIs. Android Architecture Android Project Android Architecture.</p>
+<p><img loading="lazy" width="100%" src="https://designpik.github.io/img/placeholder.svg" data-src="https://i.pinimg.com/originals/60/99/64/609964f2a8332110fc6a30cf81af130d.gif" alt="The Service Locator Design Pattern Is Used When We Want To Locate Various Services Using Jndi Lookup Considering Design Patterns In Java Pattern Design Design" title="The Service Locator Design Pattern Is Used When We Want To Locate Various Services Using Jndi Lookup Considering Design Patterns In Java Pattern Design Design" onerror="this.onerror=null;this.src='https:\/\/designpik.github.io\/img\/placeholder.svg';" class="center" />
+Source: in.pinterest.com</p>
+<p>Unity Application Model View Controller Component Design Pattern. You want to reuse action and view-management code. Today the MVC pattern is used for modern web applications because it allows the application to be scalable maintainable and easy to expand. The front controller may use other helpers to achieve the dispatching mechanism. The Service Locator Design Pattern Is Used When We Want To Locate Various Services Using Jndi Lookup Considering Design Patterns In Java Pattern Design Design.</p>
+<p><img loading="lazy" width="100%" src="https://designpik.github.io/img/placeholder.svg" data-src="https://i.pinimg.com/564x/6a/23/64/6a23647cbaa99d0dd7a0e2730f48b2c0.jpg" alt="Data Transfer Object Design Pattern Is Frequently Used Design Pattern It Is Basically Used To Pass Data With Mul Design Patterns In Java Pattern Design Design" title="Data Transfer Object Design Pattern Is Frequently Used Design Pattern It Is Basically Used To Pass Data With Mul Design Patterns In Java Pattern Design Design" onerror="this.onerror=null;this.src='https:\/\/designpik.github.io\/img\/placeholder.svg';" class="center" />
+Source: in.pinterest.com</p>
+<p>The model is a communications vehicle between the controller and view layers. A centralized point for handling screen navigation and the flow of an application. The model view controller pattern also referred to as the MVC design pattern is a software architecture pattern which primarily segments your software application into three components Model View and Controller. The Model-View-Controller MVC software design pattern is a method for separating concerns within a software application. Data Transfer Object Design Pattern Is Frequently Used Design Pattern It Is Basically Used To Pass Data With Mul Design Patterns In Java Pattern Design Design.</p>
+<p><img loading="lazy" width="100%" src="https://designpik.github.io/img/placeholder.svg" data-src="https://i.pinimg.com/originals/24/45/e1/2445e174f0c9198ede64b393f21499b4.png" alt="Mvc Design Pattern Journaldev Pattern Design Composition Pattern Design" title="Mvc Design Pattern Journaldev Pattern Design Composition Pattern Design" onerror="this.onerror=null;this.src='https:\/\/designpik.github.io\/img\/placeholder.svg';" class="center" />
+Source: pinterest.com</p>
+<p>The pattern requires that each of these be separated into different objects. In this tutorial well look at four of the most common design patterns used in the Spring Framework. The concept of MVCs was first introduced by Trygve Reenskaug who proposed it as a way to develop desktop application GUIs. For a full description see P of EAA page 379. Mvc Design Pattern Journaldev Pattern Design Composition Pattern Design.</p>
+
+            </article>
+            <div class="row"><div class="posts-image" style="width:50%;"><a style="margin:5px;" href="/plate-designer-uk/">&laquo;&laquo;&nbsp;35 Great Plate designer uk With Creative Desiign</a></div>
+    <div class="posts-image" style="width:50%"><a style="margin:5px;" href="/antique-machine-embroidery-designs/">44 New Antique machine embroidery designs with remodeling ideas&nbsp;&raquo;&raquo;</a></div></div>
+            
+            <div class="mb-4">
+                <span class="taglist"></span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+<div class="container pt-4 pb-4">
+    
+    <h5 class="font-weight-bold spanborder"><span>Related Article</span></h5>
+    <div class="row">
+        <div class="col-lg-6">
+                <div class="mb-3 d-flex align-items-center">
+                    <a href="/black-and-red-designer-sweater/"><img height="80" src="/img/placeholder.svg" data-src="https://i.pinimg.com/736x/ee/0a/2c/ee0a2c9439d9b0259a07fe658f031674.jpg" onerror="this.onerror=null;this.src='https:\/\/designpik.github.io\/img\/placeholder.svg';"/></a>
+                    <div class="pl-3">
+                        <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="/black-and-red-designer-sweater/">17 Popular Black and red designer sweater for New Project</a>
+                        </h2>
+                        <small class="text-muted">Mar 01 . 6 min read</small>
+                    </div>
+                </div>
+        </div>
+        <div class="col-lg-6">
+                <div class="mb-3 d-flex align-items-center">
+                    <a href="/arch-interiors-design-group/"><img height="80" src="/img/placeholder.svg" data-src="https://i.pinimg.com/originals/06/5a/90/065a9065131b687d879135b3b8aaeb1b.jpg" onerror="this.onerror=null;this.src='https:\/\/designpik.github.io\/img\/placeholder.svg';"/></a>
+                    <div class="pl-3">
+                        <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="/arch-interiors-design-group/">32 Great Arch interiors design group with remodeling ideas</a>
+                        </h2>
+                        <small class="text-muted">Aug 10 . 6 min read</small>
+                    </div>
+                </div>
+        </div>
+        <div class="col-lg-6">
+                <div class="mb-3 d-flex align-items-center">
+                    <a href="/best-web-design-company-in-nigeria/"><img height="80" src="/img/placeholder.svg" data-src="https://i.pinimg.com/736x/2f/95/90/2f959010e63f1ef1bc4e939c2a580812.jpg" onerror="this.onerror=null;this.src='https:\/\/designpik.github.io\/img\/placeholder.svg';"/></a>
+                    <div class="pl-3">
+                        <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="/best-web-design-company-in-nigeria/">29 Sample Best web design company in nigeria With Creative Desiign</a>
+                        </h2>
+                        <small class="text-muted">Aug 10 . 8 min read</small>
+                    </div>
+                </div>
+        </div>
+        <div class="col-lg-6">
+                <div class="mb-3 d-flex align-items-center">
+                    <a href="/andi-watson-lighting-designer/"><img height="80" src="/img/placeholder.svg" data-src="https://i.pinimg.com/736x/9d/97/0c/9d970cacc126384c58ecbaa8dddb7ad6.jpg" onerror="this.onerror=null;this.src='https:\/\/designpik.github.io\/img\/placeholder.svg';"/></a>
+                    <div class="pl-3">
+                        <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="/andi-watson-lighting-designer/">36 Top Andi watson lighting designer with remodeling ideas</a>
+                        </h2>
+                        <small class="text-muted">Dec 08 . 9 min read</small>
+                    </div>
+                </div>
+        </div>
+        <div class="col-lg-6">
+                <div class="mb-3 d-flex align-items-center">
+                    <a href="/website-designer-glasgow/"><img height="80" src="/img/placeholder.svg" data-src="https://i.pinimg.com/736x/50/64/8b/50648bead4fc96ed283ba59ae1496454.jpg" onerror="this.onerror=null;this.src='https:\/\/designpik.github.io\/img\/placeholder.svg';"/></a>
+                    <div class="pl-3">
+                        <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="/website-designer-glasgow/">22 Popular Website designer glasgow Trend in 2021</a>
+                        </h2>
+                        <small class="text-muted">Feb 08 . 7 min read</small>
+                    </div>
+                </div>
+        </div>
+        <div class="col-lg-6">
+                <div class="mb-3 d-flex align-items-center">
+                    <a href="/bali-style-homes-designs/"><img height="80" src="/img/placeholder.svg" data-src="https://i.pinimg.com/originals/ea/d2/1b/ead21b066455752f508c3697fb779db9.jpg" onerror="this.onerror=null;this.src='https:\/\/designpik.github.io\/img\/placeholder.svg';"/></a>
+                    <div class="pl-3">
+                        <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="/bali-style-homes-designs/">30  Bali style homes designs with remodeling ideas</a>
+                        </h2>
+                        <small class="text-muted">Jun 05 . 8 min read</small>
+                    </div>
+                </div>
+        </div>
+        <div class="col-lg-6">
+                <div class="mb-3 d-flex align-items-center">
+                    <a href="/artistic-design-family-dentistry/"><img height="80" src="/img/placeholder.svg" data-src="https://i.pinimg.com/736x/ae/91/ca/ae91ca1afd47c30d3f80e4cd9547b63c--dentistry-creative-design.jpg" onerror="this.onerror=null;this.src='https:\/\/designpik.github.io\/img\/placeholder.svg';"/></a>
+                    <div class="pl-3">
+                        <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="/artistic-design-family-dentistry/">53 Sample Artistic design family dentistry Trend in 2022</a>
+                        </h2>
+                        <small class="text-muted">Mar 18 . 6 min read</small>
+                    </div>
+                </div>
+        </div>
+        <div class="col-lg-6">
+                <div class="mb-3 d-flex align-items-center">
+                    <a href="/adams-design-associates/"><img height="80" src="/img/placeholder.svg" data-src="https://i.pinimg.com/736x/2d/67/a2/2d67a2c32aed9cdeb8e00e48cb9ef883.jpg" onerror="this.onerror=null;this.src='https:\/\/designpik.github.io\/img\/placeholder.svg';"/></a>
+                    <div class="pl-3">
+                        <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="/adams-design-associates/">53 Top Adams design associates Trend in 2022</a>
+                        </h2>
+                        <small class="text-muted">Aug 27 . 6 min read</small>
+                    </div>
+                </div>
+        </div>
+</div>
+</div>
+</div>
+    </main>    <script async="async" src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script async="async" src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script async="async" src="https://designpik.github.io/assets/js/theme.js"></script>
+    <script>function init(){var imgDefer=document.getElementsByTagName('img');for (var i=0; i<imgDefer.length; i++){if(imgDefer[i].getAttribute('data-src')){imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));}}}window.onload=init;</script>
+    
+    <footer class="bg-white border-top p-3 text-muted small">
+        <div class="container">
+        <div class="row align-items-center justify-content-between">
+            <div><span style="text-transform: capitalize;"><a href="https://designpik.github.io/">In Design Pictures</a> Copyright &copy; 2022.</span></div>
+            
+        </div>
+        </div>
+    </footer>
+
+
+<script type="text/javascript">
+var sc_project=12137781; 
+var sc_invisible=1; 
+var sc_security="24ae3eb0"; 
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js"
+async></script>
+<noscript><div class="statcounter"><a title="Web Analytics"
+href="https://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="https://c.statcounter.com/12137781/0/24ae3eb0/1/"
+alt="Web Analytics"
+referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+
+ 
+  </body>
+</html>
